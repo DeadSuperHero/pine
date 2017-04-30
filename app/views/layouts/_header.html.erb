@@ -7,7 +7,12 @@
 <div id="user_menu">
   <div class="btn-group">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <% if author_signed_in? %>
+      <%= image_tag current_author.avatar.article_thumb, class: "sidebar_avatar" %>
+      <%= current_author.name %>
+      <% else %>
       Author
+      <% end %>
     </button>
     <div class="dropdown-menu dropdown-menu-right">
 

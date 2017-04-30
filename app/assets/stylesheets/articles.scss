@@ -13,6 +13,11 @@ h1.title, .title {
   display: inline-block;
 }
 
+#author_info .avatar {
+  border-radius: 30px;
+  height: 35px
+}
+
 .title {
   width: 100%;
   border-bottom: 1px #909090 solid;

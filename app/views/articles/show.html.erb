@@ -6,8 +6,13 @@
       <%= @article.title %>
     </h1>
 
-      <%= @article.author.avatar%>
-      <%= @article.author.email %>
+
+    <div id="author_info">
+      <%= link_to @article.author, class: :"author_link" do %>
+        <%= image_tag @article.author.avatar.article_thumb, class: "avatar" %>
+        <%= @article.author.name %>
+      <% end %>
+    </div>
 
     <div class="entry_actions">
       <%= link_to 'Edit', edit_article_path(@article) %>
