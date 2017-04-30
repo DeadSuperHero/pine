@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container" id="page-wrap">
+  <div id="article_expanded" class="col-md-8">
+    <h1 class="title">
+      <%= @article.title %>
+    </h1>
+
+      <%= @article.author.avatar%>
+      <%= @article.author.email %>
+
+    <div class="entry_actions">
+      <%= link_to 'Edit', edit_article_path(@article) %>
+      <%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+
+      <%= @article.body.html_safe %>
+</div>

@@ -1,0 +1,36 @@
+<%= simple_form_for(article) do |f| %>
+  <% if article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="title h1">
+      <%= f.text_area :title , class: "h1", remote: true,label: false,
+      placeholder: "New Article"%>
+    </div>
+
+    <%= f.text_area :body , class: "editable", remote: true, label: false,
+    placeholder:"Tell your story..." %>
+
+  <div class="field">
+    <%= f.input :published, as: :boolean %>
+  </div>
+
+  <div class="entry_actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
+<script>
+  var editor = new MediumEditor('.editable', {
+    // options go here
+  });
+</script>

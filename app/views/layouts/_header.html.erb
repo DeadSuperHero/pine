@@ -1,0 +1,36 @@
+<nav class="navbar navbar-toggleable-md fixed-top bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#sublist_actions" aria-controls="sublist_actions" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="/">Pine</a>
+
+<div id="user_menu">
+  <div class="btn-group">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Author
+    </button>
+    <div class="dropdown-menu dropdown-menu-right">
+
+
+      <% if author_signed_in? %>
+      <%= link_to "New Article", new_article_path(current_author),
+      class: "dropdown-item" %>
+      <%= link_to "My Profile", author_path(current_author),
+      class: "dropdown-item" %>
+      <%= link_to "Edit Profile", edit_author_registration_path,
+      class: "dropdown-item" %>
+      <div class="dropdown-divider"></div>
+        <%= link_to "Sign Out", destroy_author_session_path,
+        class: "dropdown-item", method: :delete %>
+
+        <% else %>
+        <%= link_to "Sign In", new_author_session_path,
+        class: "dropdown-item" %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
+
+</nav>

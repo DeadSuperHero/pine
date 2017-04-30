@@ -1,0 +1,46 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#article_expanded {
+  margin: auto;
+}
+
+h1.title, .title {
+  display: inline-block;
+}
+.entry_actions {
+  display: inline-block;
+}
+
+.title {
+  width: 100%;
+  border-bottom: 1px #909090 solid;
+  display: inline-block;
+  height: auto;
+}
+
+textarea#article_title {
+  min-height: 40px;
+  max-height: 200px;
+  height: auto;
+  overflow: visible;
+}
+
+textarea#article_title, textarea#article_body {
+      outline: none;
+      width: 100%;
+      resize: none;
+      border: none;
+      height: initial;
+}
+
+textarea#article_body {
+  padding: 0px 0px 5px 0px;
+}
+
+.medium-editor-element {
+    word-wrap: break-word;
+    min-height: 30px;
+    width: 100%;
+}

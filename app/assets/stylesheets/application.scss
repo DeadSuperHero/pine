@@ -1,0 +1,48 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ *= require medium-editor/medium-editor
+ *= require medium-editor/themes/beagle
+ */
+
+@import "bootstrap";
+
+.medium-editor-element {
+    word-wrap: break-word;
+    min-height: 30px;
+    outline: none;
+}
+
+/* Holy shit, that is gross */
+
+blockquote {
+  margin: 0 0 1rem;
+  border-left: 2px solid;
+  padding: 12px;
+  font-style: italic;
+  color: #7b7b7b;
+}
+
+#page-wrap {
+  margin-top: 4em;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  padding: 10px 10px 10px 20px;
+}
+
+#user_menu {
+  position: absolute;
+  right: 10px;
+}
