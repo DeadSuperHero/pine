@@ -1,15 +1,31 @@
 
-<div id="page-wrap">
-  <h2>Hello!</h2>
+<div id="page-wrap" class="container">
+  <div id="article_expanded" class="col-md-8">
 
-<div id="author_avatar">
-  <%= image_tag @author.avatar.profile_thumb %>
+    <div id="profile_box">
+      <div id="author_avatar">
+        <%= image_tag @author.avatar.profile_thumb %>
+      </div>
+
+        <div id="author_name">
+          <h2><%= @author.name %></h2>
+        </div>
+    </div>
+  </div>
 </div>
 
-  <div id="author_name">
-    <%= @author.name %>
-  </div>
-
-  <div id="author_email">
-    <%= @author.email %>
+<div id="author_articles">
+    <div class="row">
+    <ul class="article_list">
+      <% @author.articles.each do |article| %>
+      <% if article.author.present? %>
+        <%= link_to article, class: :"article_link h2" do %>
+          <li class="title">
+            <%= article.title.html_safe %>
+          </li>
+            <% end %>
+        <% end %>
+      <% end %>
+      </ul>
+    </div>
 </div>

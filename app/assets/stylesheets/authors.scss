@@ -1,3 +1,43 @@
 // Place all the styles related to the Authors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#profile_box {
+    text-align: center;
+}
+
+#author_avatar {
+  display: inline-block;
+}
+
+#author_avatar img {
+    border-radius: 28em;
+}
+
+#author_articles {
+  background: #d2d2d2;
+  min-height: 36em;
+}
+
+#author_name {
+    display: inline-block;
+}
+
+ul.article_list {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
+
+a.article_link.h2 {
+  display: inline-grid;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 186px;
+  background: #888;
+  padding: 20px;
+  margin: 5px;
+  outline: 1px solid #fff;
+  color: #fff;
+}
