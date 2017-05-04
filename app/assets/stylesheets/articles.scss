@@ -11,11 +11,18 @@ h1.title, .title {
 }
 .entry_actions {
   display: inline-block;
+  float: right;
 }
 
 #author_info .avatar {
   border-radius: 30px;
-  height: 35px
+  height: 35px;
+}
+
+small.time {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #a9a9a9;
 }
 
 .title {

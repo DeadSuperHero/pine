@@ -65,9 +65,17 @@ blockquote {
   font-style: italic;
   color: #7b7b7b;
 }
+
 .sidebar_avatar {
   height: 20px;
   border-radius: 30px;
+}
+
+#sidebar {
+  display: inline-block;
+  float: right;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 #page-wrap {
@@ -75,9 +83,14 @@ blockquote {
   border: 1px solid #efefef;
   border-radius: 5px;
   padding: 10px 10px 10px 20px;
+  min-height: 36em;
+  margin: 4em 0em 0em 8em;
 }
 
 #user_menu {
   position: absolute;
   right: 10px;
 }
+
+
+/**/
