@@ -4,6 +4,9 @@
 
 #profile_box {
     text-align: center;
+    height: 6em;
+    margin-top: 4em;
+    vertical-align: text-top;
 }
 
 #author_avatar {
@@ -12,6 +15,7 @@
 
 #author_avatar img {
     border-radius: 28em;
+    height: 80px;
 }
 
 #author_articles {
@@ -23,15 +27,21 @@
     display: inline-block;
 }
 
+#author_name h2 {
+  font-weight: 100;
+}
+
 ul.article_list {
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
+  max-width: 70%;
+      text-align: center;
 }
 
 a.article_link.h2 {
   display: inline-grid;
-  width: 45%;
+  width: 43%;
   margin-left: auto;
   margin-right: auto;
   height: 186px;

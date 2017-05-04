@@ -25,6 +25,37 @@
     outline: none;
 }
 
+/* Devise styling */
+
+#auth-wrap {
+  margin-top: 4em;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  padding: 0px;
+}
+
+.auth_form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.auth_form input#author_email, .auth_form input#author_password {
+  width: 100%;
+}
+
+form#new_author {
+      padding: 10px;
+}
+
+h3.auth_form {
+  background: #f1f1f1;
+  padding: 5px;
+}
+
+#shared_links {
+      text-align: center;
+}
+
 /* Holy shit, that is gross */
 
 blockquote {

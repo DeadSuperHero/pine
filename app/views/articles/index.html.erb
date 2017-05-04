@@ -2,17 +2,30 @@
 <div class="container" id="page-wrap">
   <h1>Articles</h1>
 
-      <% @articles.each do |article| %>
-    <div class="article_entry">
-            <h3><%= link_to article.title.html_safe, article %></h3>
-            <div id="author_info">
-              <%= link_to article.author, class: :"author_link" do %>
-                <%= image_tag article.author.avatar.article_thumb, class: "avatar" %>
-                <%= article.author.name %>
-              <% end %>
-            </div>
-            <i> <%= article.created_at %></i>
-            <p><%= sanitize article.body.truncate(300) %></p>
-    </div>
-      <% end %>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Articles</a>
+
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Drafts</a>
+    </li>
+  </ul>
+
+  <% @articles.each do |article| %>
+<div class="article_entry">
+        <% if article.published? %>
+        <h3><%= link_to article.title.html_safe, article %></h3>
+        <div id="author_info">
+          <%= link_to article.author, class: :"author_link" do %>
+            <%= image_tag article.author.avatar.article_thumb, class: "avatar" %>
+            <%= article.author.name %>
+          <% end %>
+        </div>
+        <i> <%= article.created_at %></i>
+        <p><%= sanitize article.body.truncate(300) %></p>
+</div>
+        <% end %>
+  <% end %>
+
 </div>
