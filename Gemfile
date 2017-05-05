@@ -38,6 +38,10 @@ gem 'devise'
 gem 'ostatus2'
 gem 'pubsubhubbub-rails', require: 'pubsubhubbub'
 
+
+# Metadata
+gem 'meta-tags'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

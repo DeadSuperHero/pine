@@ -107,6 +107,8 @@ GEM
       mime-types (>= 1.16, < 4)
     medium-editor-rails (2.3.1)
       railties (>= 3.0)
+    meta-tags (2.4.0)
+      actionpack (>= 3.2.0, <= 5.1.0)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -227,6 +229,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   medium-editor-rails
+  meta-tags
   mini_magick
   ostatus2
   pg
