@@ -36,7 +36,10 @@ gem 'devise'
 # Include OStatus greatness
 gem 'ostatus2'
 gem 'pubsubhubbub-rails', require: 'pubsubhubbub'
+
+# Carrierwave
 gem 'carrierwave'
+gem 'carrierwave-aws'
 
 # Metadata
 gem 'meta-tags'
@@ -72,8 +75,8 @@ group :development do
 end
 
 group :production do
-  gem 'carrierwave'
-  gem 'carrierwave-aws'
+  gem 'rails_12factor'
+  gem 'fog'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
