@@ -45,7 +45,7 @@ def author_params
   params.require(:author).permit(:name, :email, :author_id, :avatar)
 end
 
-def configure_sanitized_params
+  def configure_sanitized_params
   devise_parameter_sanitizer.for(:sign_up) {|u| u.permit(:name, :email, :avatar)}
   devise_parameter_sanitizer.for(:account_update) {|u| u.permit(:name, :email, :avatar)}
 
@@ -59,10 +59,10 @@ def configure_sanitized_params
   end
 
   # If you have extra params to permit, append them to the sanitizer.
-   def configure_account_update_params do |author_params|
-     author_params.permit(:name, :avatar,
-     :email, :password, :password_confirmation)
-   end
+  # def configure_account_update_params do |author_params|
+  #   author_params.permit(:name, :avatar,
+  #   :email, :password, :password_confirmation)
+  # end
 
   # The path used after sign up.
   # def after_sign_up_path_for(resource)
