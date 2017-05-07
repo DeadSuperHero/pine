@@ -21,8 +21,6 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'carrierwave'
-gem 'carrierwave-aws'
 gem 'simple_form'
 
 # Obligatory Bootstrap and FontAwesome
@@ -38,7 +36,7 @@ gem 'devise'
 # Include OStatus greatness
 gem 'ostatus2'
 gem 'pubsubhubbub-rails', require: 'pubsubhubbub'
-
+gem 'carrierwave'
 
 # Metadata
 gem 'meta-tags'
@@ -74,7 +72,8 @@ group :development do
 end
 
 group :production do
-  gem 'fog'
+  gem 'carrierwave'
+  gem 'carrierwave-aws'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
