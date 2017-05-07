@@ -15,6 +15,7 @@
 
     <small class="time"> <i class="fa fa-clock-o"></i> <%= @article.created_at %></small>
 
+<% if current_author && current_author == @article.author %>
     <div class="entry_actions">
       <%= link_to edit_article_path(@article) do %>
       <i class="fa fa-pencil"></i>
@@ -23,6 +24,7 @@
       <i class="fa fa-close"></i>
       <% end %>
     </div>
+    <% end %>
 
       <%= @article.body.html_safe %>
   </div>

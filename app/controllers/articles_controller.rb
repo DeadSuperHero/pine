@@ -35,6 +35,8 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    unless @article.author == current_author.present?
+      return render text: "Not Allowed", status: :forbidden
   end
 
   # POST /articles
