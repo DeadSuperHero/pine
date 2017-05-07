@@ -11,6 +11,21 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    set_meta_tags title: @article.title,
+            site: 'Pine Blog',
+            reverse: true,
+            description: @article.body.truncate(300),
+            twitter: {
+              card: "summary",
+              title: @article.title,
+              description:  @article.body.truncate(300),
+            },
+            og: {
+              title:    @article.title,
+              description: @article.body.truncate(300),
+              type:     'website',
+              url:      article_url(@article),
+            }
   end
 
   # GET /articles/new
