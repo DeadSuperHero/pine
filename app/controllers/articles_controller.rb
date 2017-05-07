@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_author!, :except => [:index, :show]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   # GET /articles
@@ -11,8 +12,6 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
   end
-
-  before_action :authenticate_author!
 
   # GET /articles/new
   def new
