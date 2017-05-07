@@ -22,6 +22,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'carrierwave'
+gem 'carrierwave-aws'
 gem 'simple_form'
 
 # Obligatory Bootstrap and FontAwesome
@@ -74,7 +75,6 @@ end
 
 group :production do
   gem 'fog'
-  gem 'carrierwave-aws'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
