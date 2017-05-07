@@ -5,7 +5,7 @@
 <meta property="og:title" content='<%= @article.title.html_safe %>' />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fake.com" />
-<meta property="og:description" content='<%= truncate(@article.body.html_safe, length:300) %>' />
+<meta property="og:description" content='<%= strip_tags(@article.body).truncate(300) %>' />
 
 <!-- The above is a work in progress. -->
 
