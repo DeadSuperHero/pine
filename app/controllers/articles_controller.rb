@@ -35,8 +35,9 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    unless @article.author == current_author.present?
-      return render text: "Not Allowed", status: :forbidden
+    @article = Article.find(params[:id])
+    unless @article.author == current_author || current_author.present?
+      redirect_to @article, notice: 'Not Allowed.', status: forbidden }
     end
   end
 
