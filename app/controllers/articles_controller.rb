@@ -39,6 +39,7 @@ class ArticlesController < ApplicationController
     unless @article.author == current_author || current_author.present?
       return render text: "Not Allowed", status: :forbidden
   end
+end
 
   # POST /articles
   # POST /articles.json
