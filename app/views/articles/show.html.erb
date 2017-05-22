@@ -13,7 +13,9 @@
       <% end %>
     </div>
 
-    <small class="time"> <i class="fa fa-clock-o"></i> <%= @article.created_at %></small>
+    <small class="time"> <i class="fa fa-clock-o"></i>
+      <%= @article.created_at.to_date.iso8601  %>
+    </small>
 
 <% if current_author && current_author == @article.author %>
     <div class="entry_actions">
