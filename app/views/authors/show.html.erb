@@ -10,6 +10,7 @@
 <div id="author_articles">
     <div class="row">
     <ul class="article_list">
+        <% unless @author.articles.blank? %>
       <% @author.articles.each do |article| %>
       <% if article.author.present? %>
         <%= link_to article, class: :"article_link h2" do %>
@@ -18,6 +19,9 @@
           </li>
             <% end %>
         <% end %>
+      <% end %>
+      <% else %>
+      <%= render "no-articles" %>
       <% end %>
       </ul>
     </div>
