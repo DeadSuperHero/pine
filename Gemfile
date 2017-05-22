@@ -44,6 +44,13 @@ gem 'carrierwave-aws'
 # Metadata
 gem 'meta-tags'
 
+# Background Processes
+gem "sidekiq"
+gem "sidekiq-cron"
+
+# Cross-origin Resource Sharing
+gem "rack-cors"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

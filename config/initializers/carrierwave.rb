@@ -1,5 +1,11 @@
 CarrierWave.configure do |config|
 
+  # Choose what kind of storage to use for this uploader:
+
+  if Rails.env.development? || Rails.env.test?
+      config.storage = :file
+    else
+
   config.storage = :aws
   config.aws_bucket = ENV["S3_BUCKET_NAME"]
   config.aws_acl   = "public-read"
@@ -10,5 +16,5 @@ CarrierWave.configure do |config|
     region:            ENV["AWS_REGION"]
 
   }
-
+  end
 end
