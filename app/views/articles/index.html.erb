@@ -6,6 +6,7 @@
 
 
 <div class="col-md-12">
+  <% unless @articles.blank? %>
   <% @articles.each do |article| %>
 <div class="article_entry">
         <% if article.published? %>
@@ -21,6 +22,9 @@
 </div>
         <% end %>
   <% end %>
+<% else %>
+<%= render "no-articles" %>
+<% end %>
 </div>
 
     </div>

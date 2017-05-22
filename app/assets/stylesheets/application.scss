@@ -25,6 +25,24 @@
     outline: none;
 }
 
+/* NoContent */
+
+.nocontent {
+  color: #929090;
+  text-align: center;
+  border: 2px dashed #a7a7a7;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.nocontent .notice {
+  font-size: 3em;
+}
+
+.nocontent h3 {
+    font-size: 3em;
+}
+
 /* Devise styling */
 
 #auth-wrap {
