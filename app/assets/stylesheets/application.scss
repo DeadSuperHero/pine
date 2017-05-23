@@ -106,10 +106,18 @@ blockquote {
   margin-right: auto;
 }
 
-#user_menu {
-  position: relative;
-  display: inline-block;
+.nav_container {
+      width: 100%;
 }
+
+a.navbar-brand {
+  float: left;
+}
+
+#user_menu {
+  float: right;
+}
+
 
 
 /**/
